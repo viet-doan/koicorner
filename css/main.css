@@ -1,0 +1,209 @@
+html, body {
+  overflow: hidden;
+  margin: 0;
+}
+
+/* BACKGROUND */
+.container {
+    position: relative;
+    height: 100vh;
+    display: flex;
+  }
+  
+  .background-image {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .background-image img {
+    object-fit: cover;
+    width: auto;
+    height: 100%;
+  }
+
+  /* TEXTS AROUND LOGO */
+  .koi-text {
+    text-transform: uppercase;
+    position: absolute;
+    top: 40%;
+    left: 27%;
+    transform: translateY(-50%);
+
+    font-size: 96px;
+    font-weight: 500;
+    color: rgb(138,24,26);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+  
+  .corner-text {
+    text-transform: uppercase;
+    position: absolute;
+    top: 40%;
+    right: 14%;
+    transform: translateY(-50%);
+
+    font-size: 96px;
+    font-weight: 500;
+    color: rgb(138,24,26);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+
+  /* NAV CONTAINER [Left and Right]*/
+  .nav-container-left {
+    position: relative;
+    z-index: 1;
+    width: 20%;
+    left: 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  .nav-container-right {
+    position: relative;
+    z-index: 1;
+    margin-right: 0;
+    width: 80%; /* Change this to take up the complete right side */
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-end; /* Align the buttons to the right side */
+  }
+  
+  .nav-text {
+    font-size: 24px;
+    text-align: left;
+  }
+
+.btn-active{
+    text-decoration: none;
+    background: rgb(90, 15, 15);
+    border: 2px solid #211d1f;
+    border-left: 10px solid rgb(90, 15, 15);
+    color: #eeeeee;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 18px 10px;
+    min-width: 160px;
+    margin-left: 0px;
+    cursor: default;
+    position: relative;
+}
+
+/* Button 1 [on left side] */
+.btn1{
+    background: none;
+    border: 2px solid #fff;
+    border-left: 10px solid rgb(138,24,26);
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    padding: 18px 10px;
+    min-width: 160px;
+    margin-left: 0px;
+    cursor: pointer;
+    transition: color 0.4s linear;
+    position: relative;
+}
+
+.btn1:hover {
+    color: #fff;
+}
+
+.btn1::before{
+    content: "";
+    position:absolute;
+    left:0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(138,24,26);
+    z-index: -1;
+    transition: transform 0.5s;
+    transform-origin: 0 0;
+    /* transition-timing-function: cubic-bezier(0.5, 1.6, 0.4, 0.7); */
+    transition-timing-function:cubic-bezier(0.5,0.8,0.8,0.5)
+}
+
+.btn1::before {
+    transform: scaleX(0);
+}
+
+.btn1:hover::before {
+    transform: scaleX(1);
+}
+
+
+/* Button 2 [on right side] */
+.nav-container-right {
+  position: relative;
+  z-index: 1;
+  width: 80%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-end;
+}
+
+.btn2 {
+  text-align: right;
+  background: none;
+  border: 2px solid #fff;
+  border-right: 10px solid rgb(138,24,26);
+  color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+  padding: 18px 10px;
+  min-width: 260px;
+  margin-right: 0px;
+  cursor: pointer;
+  transition: color 0.4s linear;
+  position: relative;
+  opacity: 0;
+  animation: fade-in-right 1s forwards;
+  animation-delay: calc(0.2s * var(--index));
+}
+
+.btn2::before {
+  content: "";
+  position: absolute;
+  right: -10px;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgb(138,24,26);
+  z-index: -1;
+  transition: transform 0.5s;
+  transform-origin: 100% 0;
+  transition-timing-function: cubic-bezier(0.5,0.8,0.8,0.5);
+}
+
+.btn2::before {
+  transform: scaleX(0);
+}
+
+.btn2:hover::before {
+  transform: scaleX(1);
+}
+
+.btn2 {
+  animation: fade-in-right 1s forward;
+}
+
+
+@keyframes fade-in-right {
+  0% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}

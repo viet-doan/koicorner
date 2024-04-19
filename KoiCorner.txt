@@ -1,0 +1,21 @@
+
+
+1. Defining Project (Topic):
+Theme - Mostly simple with main colour usage of white and red
+      - The website well not have the option to scroll (everything will be on the screen size)
+      - Navigation bar to  access different pages
+Topic = Creating a visual page to display the Koi Corner as a brand and products
+- Presentable Products:
+    - IMG of their special drink container
+    - Poster of the Components for the container
+    - Poster of the Description for the container
+    - Advertisement poster of the container
+    - Orthogonal Drawing of the container
+    - Logo Guideline Booklet
+    - Circular Logo
+    - Vertical Logo
+    - Fish Icon
+
+
+
+

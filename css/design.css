@@ -1,0 +1,143 @@
+html, body {
+    background-color: #211d1f;
+    overflow: hidden;
+    margin: 0;
+  }
+
+  
+/* Right side */
+.right-content {
+    display: inline-block;
+    margin: 1em 5%;
+}
+
+h2, p.desc {
+    margin-top: 0.5em;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    color: #fff;
+}
+
+p {
+    margin-right: 2em;
+    margin-left: 2em;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #eee;
+}
+
+
+.container-right {
+    display: inline-block;
+    align-items: center;
+}
+
+.image-snippet {
+  opacity: 30%;
+  width: 10em;
+  height: auto;
+  display: block;
+  margin: 1em auto 0em;
+}
+
+img.image-snippet:hover {
+    opacity: 0.8;
+}
+
+/* Main Image */
+.center-image {
+    display: block;
+    margin-left: 20%;
+    z-index: 10;
+}
+
+/* Container */
+  .container {
+      position: relative;
+      height: 100vh;
+      display: flex;
+    }
+    
+    /* NAV CONTAINER [Left and Right]*/
+    .nav-container-left {
+      position: relative;
+      z-index: 1;
+      width: 0%;
+      left: 0;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+    }
+  
+    .nav-container-right {
+      position: relative;
+      z-index: 1;
+      margin-right: 0;
+      width: 80%; /* Change this to take up the complete right side */
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: flex-end; /* Align the buttons to the right side */
+    }
+    
+    .nav-text {
+      font-size: 24px;
+      text-align: left;
+    }
+  
+  .btn-active{
+      text-decoration: none;
+      background: rgb(90, 15, 15);
+      border: 2px solid #211d1f;
+      border-left: 10px solid rgb(90, 15, 15);
+      color: #eeeeee;
+      font-family: Arial, Helvetica, sans-serif;
+      padding: 18px 10px;
+      min-width: 160px;
+      margin-left: 0px;
+      cursor: default;
+      position: relative;
+  }
+
+  /* Button 1 [on left side] */
+  .btn1{
+      text-decoration: none;
+      background: none;
+      border: 2px solid #211d1f;
+      border-left: 10px solid rgb(90, 15, 15);
+      color: #211d1f;
+      font-family: Arial, Helvetica, sans-serif;
+      padding: 18px 10px;
+      min-width: 160px;
+      margin-left: 0px;
+      cursor: pointer;
+      transition: color 0.4s linear;
+      position: relative;
+  }
+  
+  .btn1:hover {
+      color: #eeeeee;
+  }
+  
+  .btn1::before{
+      content: "";
+      position:absolute;
+      left:0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background: rgb(90,15,15);
+      z-index: -1;
+      transition: transform 0.5s;
+      transform-origin: 0 0;
+      transition-timing-function:cubic-bezier(0.5,0.8,0.8,0.5)
+  }
+  
+  .btn1::before {
+      transform: scaleX(0);
+  }
+  
+  .btn1:hover::before {
+      transform: scaleX(1);
+  }
