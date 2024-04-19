@@ -15,15 +15,68 @@
         z-index: -1;
     }
 
+/* Navigation on the Right */
+/* #about {
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(100, 20, 20);
+    position: absolute;
+    left: 30%;
+    right: 10%;
+    top: 1%;
+    z-index: 99;
+} */
+/* Button 2 [on right side] */
+.nav-container-right {
+    position: absolute;
+    height: 40em;
+    top:1%;
+    right: 0;
+    z-index: 100;
+    width: 20%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-end;
+  }
+  
+  .btn {
+    text-align: center;  
+    background: rgb(138,24,26);
+    border: 2px solid #fff;
+    border-right: 10px solid rgb(138,24,26);
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    /* text-transform: uppercase; */
+    padding: 18px 10px;
+    width: clamp(50px, 15vw, 200px);
+    margin-right: 0px;
+    cursor: pointer;
+    transition: color 0.4s linear;
+    position: relative;
+    opacity: 0.5;
+    /* animation: fade-in-right 1s forwards; */
+    /* animation-delay: calc(0.2s * var(--index)); */
+  }
+  
+  .active,
+  .btn:hover {
+    opacity: 1;
+  }
 
+  .active {
+    cursor: default;
+  }
 
+/* For Laptop/PC screens */
+@media only screen and (min-width: 600px) {
     #about {
         font-family: Arial, Helvetica, sans-serif;
         color: rgb(100, 20, 20);
         position: absolute;
         left: 30%;
-        right: 25%;
-        top: clamp(2%, 10%, 30%);
+        right: clamp(10%, 25%, 30%);
+        top: clamp(2%, 5%, 10%);
         z-index: 99;
     }
         #about h1 {
@@ -34,5 +87,58 @@
 
         #about p {
             text-align: center;
-            font-size: clamp(12px, 2vw, 24px);
+            font-size: clamp(18px, 2vw, 24px);
         }
+}
+
+/* For Mobile Devices */
+@media only screen 
+/* and (min-device-width:360) */
+and (max-width: 600px) {
+    html, body{
+        /* max-height: 800px; */
+        margin: 0;
+        background-size: 100%;
+        background-repeat: no-repeat;
+        background-position: center center;
+        /* overflow-y: auto; */
+    }
+
+    .about-background {
+ 
+        overflow-y: hidden;
+        overflow-y: hidden;
+        z-index: -1;
+    }
+
+    #about {
+        font-family: Arial, Helvetica, sans-serif;
+        color: rgb(100, 20, 20);
+        position: absolute;
+        left: 30%;
+        right: 10%;
+        top: 1%;
+        z-index: 99;
+    }
+        #about h1 {
+            text-align: center;
+            font-size: clamp(18px, 7vw, 54px);
+            margin-bottom: 1em;
+            text-decoration: underline;
+        }
+
+        #about p {
+            text-align: left;
+            font-size: clamp(14px, 4vw, 18px);
+            margin-bottom: 2em;
+        }
+}
+
+@media only screen and (max-width: 615px) {
+    .btn {
+        display: none;
+    }
+}
+
+
+

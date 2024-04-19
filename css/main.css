@@ -21,7 +21,7 @@ html, body {
   
   .background-image img {
     object-fit: cover;
-    width: auto;
+    width: 100vw;
     height: 100%;
   }
 
@@ -30,7 +30,7 @@ html, body {
     text-transform: uppercase;
     position: absolute;
     top: 40%;
-    left: 27%;
+    left: 28%;
     transform: translateY(-50%);
 
     font-size: 96px;
@@ -43,10 +43,10 @@ html, body {
     text-transform: uppercase;
     position: absolute;
     top: 40%;
-    right: 14%;
+    right: 16%;
     transform: translateY(-50%);
 
-    font-size: 96px;
+    font-size: 6vw;
     font-weight: 500;
     color: rgb(138,24,26);
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
@@ -96,7 +96,7 @@ html, body {
 }
 
 /* Button 1 [on left side] */
-.btn1{
+.btn{
     background: none;
     border: 2px solid #fff;
     border-left: 10px solid rgb(138,24,26);
@@ -111,11 +111,11 @@ html, body {
     position: relative;
 }
 
-.btn1:hover {
+.btn:hover {
     color: #fff;
 }
 
-.btn1::before{
+.btn::before{
     content: "";
     position:absolute;
     left:0;
@@ -130,17 +130,17 @@ html, body {
     transition-timing-function:cubic-bezier(0.5,0.8,0.8,0.5)
 }
 
-.btn1::before {
+.btn::before {
     transform: scaleX(0);
 }
 
-.btn1:hover::before {
+.btn:hover::before {
     transform: scaleX(1);
 }
 
 
 /* Button 2 [on right side] */
-.nav-container-right {
+/* .nav-container-right {
   position: relative;
   z-index: 1;
   width: 80%;
@@ -206,4 +206,4 @@ html, body {
     opacity: 1;
     transform: translateX(0);
   }
-}
+} */
