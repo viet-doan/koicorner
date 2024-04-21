@@ -1,0 +1,33 @@
+/* Drop Down Menu */
+.mobile-menu {
+    display: none !important;
+    text-transform: uppercase;
+    background: rgb(138,24,26);
+  
+  }
+  
+  .navbar-brand,
+  .nav-link {
+    color: #fff !important;
+    text-align: center;
+  }
+  
+  .active {
+    cursor: default !important;
+    text-decoration: underline !important;
+  }
+
+  /* Responsive Design (Mobile) */
+@media only screen and (max-width: 750px) {
+
+    .mobile-menu {
+      display: block !important;
+    }
+  
+    .nav-container-left,
+    .kc-btn-active, .kc-btn,
+    .koi-text, .corner-text{
+      display: none;
+    }
+  }
+  

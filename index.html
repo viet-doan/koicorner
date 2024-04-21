@@ -9,34 +9,66 @@
   <meta name="author" content="Viet Doan">
   <meta name="description" content="Koi Corner Bubble Tea">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" type="text/css" href="css/main.css">
+
+ <!-- Bootstrap JS -->
 </head>
 
 <body>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Navbar -->
+  <nav class="mobile-menu navbar navbar-expand-lg">
+    <div class="container-fluid">
+      <!-- Brand -->
+      <a class="navbar-brand" href="index.html">Koi Corner</a>
+      <!-- Navbar toggler -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <!-- Navbar collapse -->
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <!-- Navbar links -->
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="design.html">Design</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="creator.html">Creator</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
-<div class="container">
+  <!-- Background Image -->
+  <div class="main-container">
     <div class="background-image">
       <img src="documents/KC_ScreenWBG.png" alt="Background">
+      <!-- <img src="https://anai-g08uvvxmakmtcrdkbvja-assets.s3.ap-southeast-2.amazonaws.com/3NB5YvWRGcaa16GzWbQ0.png" alt="Background"> -->
     </div>
 
+    <!-- Nav bar animated buttons -->
     <nav class="nav-container-left">
-      <a class="btn-active">Home</a>
-      <a class="btn" href="about.html" target="_blank">About</a>
-      <a class="btn" href="design.html" target="_blank">Design</a>
-      <a class="btn" href="creator.html" target="_blank">Creator</a>
+      <a class="kc-btn-active">Home</a>
+      <a class="kc-btn" href="about.html" target="_self">About</a>
+      <a class="kc-btn" href="design.html" target="_self">Design</a>
+      <a class="kc-btn" href="creator.html" target="_.self">Creator</a>
     </nav>
 
+    <!-- Brand's name surrounding background -->
     <h1 class="koi-text">Koi</h1>
     <h1 class="corner-text">Corner</h1>
+  </div>
 
-    <!-- <nav class="nav-container-right">
-      <button class="nav-text btn2 btn2">About</button>
-      <button class="nav-text btn2 btn2">Products</button>
-      <button class="nav-text btn2 btn2">Design</button>
-      <button class="nav-text btn2 btn2">Guidelines</button>
-    </nav> -->
-</div>
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>

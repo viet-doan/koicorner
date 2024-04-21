@@ -90,7 +90,7 @@ img.image-snippet:hover {
 .btn-active{
   text-decoration: none;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  color: rgb(138,24,26);
+  color: rgb(200, 60, 60);
   letter-spacing: 4px;
   font-weight: 200;
   font-size: 24px;
@@ -100,7 +100,7 @@ img.image-snippet:hover {
 
   /* background: rgb(90, 15, 15); */
   /* border: 2px solid #211d1f; */
-  border-left: 10px solid rgb(90, 15, 15);
+  border-left: 10px solid rgb(120, 20, 20);
 
   padding: 18px 10px;
   min-width: 160px;
@@ -113,7 +113,7 @@ img.image-snippet:hover {
 .btn{
   text-decoration: none;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  color: rgb(138,24,26);
+  color: rgb(200, 60, 60);
   letter-spacing: 4px;
   font-weight: 200;
   font-size: 24px;
@@ -121,7 +121,7 @@ img.image-snippet:hover {
 
   /* background: rgb(90, 15, 15);
   border: 2px solid #211d1f; */
-  border-left: 10px solid rgb(90, 15, 15);
+  border-left: 10px solid rgb(120, 20, 20);
 
   padding: 18px 10px;
   min-width: 160px;
