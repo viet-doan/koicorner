@@ -23,6 +23,7 @@ html, body {
   object-fit: cover;
   width: 100vw;
   height: 100%;
+  animation: fade-in-down 1s forwards;
 }
 
 /* Drop Down Menu */
@@ -51,6 +52,7 @@ html, body {
   top: 40%;
   left: 30%;
   transform: translateY(-50%);
+  animation: fade-in-down 1s forwards;
 
   font-size: clamp(60px, 6vw, 240px);
   font-weight: 500;
@@ -64,6 +66,7 @@ html, body {
   top: 40%;
   right: 16%;
   transform: translateY(-50%);
+  animation: fade-in-down 1s forwards;
 
   font-size: clamp(60px, 6vw, 240px);
   font-weight: 500;
@@ -114,7 +117,7 @@ html, body {
   cursor: pointer;
   transition: color 0.4s linear;
   position: relative;
-  animation: fade-in-left 1s forwards;;
+  animation: fade-in-left 1s forwards;
 }
 
 .kc-btn-active {
@@ -162,6 +165,17 @@ html, body {
   100% {
     opacity: 1;
     transform: translateX(0);
+  }
+}
+
+@keyframes fade-in-down {
+  0% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
