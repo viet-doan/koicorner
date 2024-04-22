@@ -8,7 +8,7 @@
 }
 
 html, body {
-  overflow: hidden;
+  overflow: auto;
   margin: 0;
 }
 
@@ -47,10 +47,6 @@ html, body {
 .active {
   cursor: default !important;
   text-decoration: underline !important;
-}
-
-.nav-logo {
-  width: 28px;
 }
 
 /* TEXTS AROUND LOGO */
@@ -118,7 +114,6 @@ html, body {
   font-weight: 700;
   text-underline-offset: 10px;
   cursor: default;
-
 }
 
 .kc-btn:hover {
@@ -188,7 +183,6 @@ html, body {
   display: none !important;
   text-transform: uppercase;
   background: rgb(138,24,26);
-
 }
 
 .navbar-nav {
