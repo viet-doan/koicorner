@@ -52,7 +52,7 @@ html, body {
   left: 30%;
   transform: translateY(-50%);
 
-  font-size: clamp(80px, 6vw, 240px);
+  font-size: clamp(60px, 6vw, 240px);
   font-weight: 500;
   color: rgb(138,24,26);
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
@@ -65,7 +65,7 @@ html, body {
   right: 16%;
   transform: translateY(-50%);
 
-  font-size: clamp(80px, 6vw, 240px);
+  font-size: clamp(60px, 6vw, 240px);
   font-weight: 500;
   color: rgb(138,24,26);
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
@@ -156,21 +156,18 @@ html, body {
 /* Responsive Design (Ipad Screen) */
 @media only screen and (max-width: 1200px) {
   .koi-text {
-    transform: translateX(250%);
+    transform: translateX(330%);
     top: 30%;
     
   }
   .corner-text {
-    transform: translateX(40%);
+    transform: translateX(30%);
   }
 }
 
 /* Responsive Design (Mini Ipad Screen) */
 @media only screen and (max-width: 950px) {
-  .koi-text,
-  .corner-text {
-    display: none;
-  }
+
 }
 
 /* Responsive Design (Mobile) */
