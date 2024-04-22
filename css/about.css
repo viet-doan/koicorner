@@ -4,8 +4,7 @@ html, body{
     background-size: 100%;
     background-repeat: no-repeat;
     background-position: center center;
-    overflow: auto;
-    overflow-x: hidden;
+    overflow: hidden;
 }
 
 /* Background */
@@ -14,27 +13,48 @@ html, body{
   position: absolute;
   width: 100vw;    
   overflow: hidden;
+  animation: fade-in-down 1s forwards;
   z-index: -99 !important;
 }
 
 /* Informational Text */
 .main-body{
   position: absolute;
-  width: 48vw;
-  left: 14%;
-  right: 14%;
+  width: 50vw;
+  left: clamp(10%, 14vw, 18vw);
+  animation: fade-in-down 1s forwards;
+}
+
+.row {
+  top: 8vh;
 }
 
 h1, p {
   font-family: Arial, Helvetica, sans-serif;
-  color: rgb(100, 20, 20);
+  color: rgb(90, 15, 15) !important;
 }
 
+h1 {
+  font-style: bold;
+  font-size: 2em;
+  text-align: center;
+  font-size: clamp(24px, 7vh, 54px);
+  padding-bottom: 3vh;
+  text-decoration: underline;
+}
+
+p {
+  /* padding: 4em; */
+  color: rgb(90, 15, 15);
+  font-size: clamp(10px, 3vh, 54px);
+  padding-bottom: 4vh;
+}
 
 /* Navigation bar on the right */
 .nav-container-right {
   position: absolute;
-  height: 40em;
+  /* height: 40em; */
+  height: 100vh;
   top:1%;
   right: 0;
   z-index: 100;
@@ -51,13 +71,14 @@ h1, p {
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   color: rgb(138,24,26);
   letter-spacing: 4px;
-  font-weight: 200;
-  font-size: 24px;
+  font-weight: 500;
+  font-size: clamp(12px, 2vw, 24px);
   text-align: center;
   
   border-right: 10px solid rgb(90, 15, 15);
   padding: 18px 10px;
-  width: clamp(50px, 15vw, 200px);
+  width: clamp(100px, 15vw, 200px);
+
   cursor: pointer;
   transition: color 0.4s linear;
   position: relative;
@@ -113,6 +134,17 @@ h1, p {
   }
 }
 
+@keyframes fade-in-down {
+  0% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 /* Drop Down Menu */
 .mobile-menu {
   display: none !important;
@@ -132,10 +164,39 @@ h1, p {
   text-decoration: underline !important;
 }
 
+/* Responsive Design (Smaller Screen) */
+@media only screen and (max-width: 1000px) {
+  .main-body{
+    position: absolute;
+    width: 60vw;
+    left: clamp(10%, 14vw, 18vw);
+    animation: fade-in-down 1s forwards;
+  }
+  
+  .row {
+    top: 8vh;
+  }
+  h1 {
+    padding-bottom: 1vh;
+    font-size: clamp(12px, 3vh, 18px);
+  }
+
+  p {
+    padding-bottom: 0;
+    font-size: clamp(12px, 4vh, 18px);
+  }
+  
+}
+
 /* Responsive Design (Mobile) */
 @media only screen and (max-width: 700px) {
-  .nav-container-left,
-  .kc-btn-active, .kc-btn {
+  html, body{
+    overflow-y: auto;
+}
+
+  .nav-container-right,
+  .kc-btn-active, .kc-btn,
+  .koi-text, .corner-text{
     display: none;
   }
 
@@ -143,72 +204,14 @@ h1, p {
     display: block !important;
   }
 
-  .nav-container-right,
-  .kc-btn-active, .kc-btn,
-  .koi-text, .corner-text{
-    display: none;
-  }
-}
-
-
-/* For Laptop/PC screens */
-@media only screen and (min-width: 700px) {
-  .about {
-    font-family: Arial, Helvetica, sans-serif;
-    color: rgb(100, 20, 20);
+  .main-body{
     position: absolute;
-    left: 30%;
-    right: clamp(10%, 25%, 30%);
-    top: clamp(2%, 5%, 10%);
-    z-index: 99;
+    width: 70vw;
+    left: clamp(12%, 14vw, 18vw);
+    animation: fade-in-down 1s forwards;
   }
-} 
-/* h1 {
-  position: inherit;
-  top: 2em;
-  text-align: center;
-  font-size: clamp(18px, 7vw, 54px);
-  text-decoration: underline;
-}
 
-p {
-    text-align: center;
-    font-size: clamp(10px, 2vw, 24px);
-  }
-} */
-
-/* For Mobile Devices */
-@media only screen 
-/* and (min-device-width:360) */
-and (max-width: 700px) {
-html, body{
-  overflow-y: auto;
-}
-.about-background {
-  overflow-y: hidden;
-  overflow-y: hidden;
-  z-index: -1;
-}
-.about {
-
-  position: absolute;
-  left: 30%;
-  right: 10%;
-  top: 1%;
-  z-index: 99;
-}
-  #about h1 {
-    text-align: center;
-    font-size: clamp(18px, 7vw, 54px);
-    margin-bottom: 1em;
-    text-decoration: underline;
-  }
-  
-  #about p {
-    text-align: left;
-    font-size: clamp(10px, 4vw, 18px);
-    margin-bottom: 2em;
+  .row {
+    top: 2vh;
   }
 }
-
-
