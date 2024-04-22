@@ -58,7 +58,6 @@ p {
 /* Navigation bar on the right */
 .nav-container-right {
   position: absolute;
-  /* height: 40em; */
   height: 100vh;
   top:1%;
   right: 0;
@@ -90,7 +89,6 @@ p {
 
 .kc-btn-active {
   font-weight: 700;
-  text-underline-offset: 10px;
   cursor: default;
 }
 
