@@ -30,25 +30,6 @@ html, body {
   animation: fade-in-down 1s forwards;
 }
 
-/* Drop Down Menu */
-.mobile-menu {
-  display: none !important;
-  text-transform: uppercase;
-  background: rgb(138,24,26);
-
-}
-
-.navbar-brand,
-.nav-link {
-  color: #fff !important;
-  text-align: center;
-}
-
-.active {
-  cursor: default !important;
-  text-decoration: underline !important;
-}
-
 /* TEXTS AROUND LOGO */
 .koi-text {
   text-transform: uppercase;
@@ -208,6 +189,11 @@ html, body {
   text-align: center;
 }
 
+.nav-bottom {
+  border-bottom-left-radius: 1em;
+  border-bottom-right-radius: 1em;
+}
+
 .active {
   margin-top: -4px;
   background-color: rgb(160, 50, 50);
@@ -215,7 +201,6 @@ html, body {
   border-top-right-radius: 1em;
   cursor: default !important;
   font-weight: 700 !important;
-  text-decoration: none !important;
 }
 
 /* Responsive Design for smaller screens */
