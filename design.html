@@ -16,7 +16,11 @@
 </head>
 
 <body>
+  <!-- Import W3Schools CSS -->
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <!-- Import Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
   <!-- Navbar -->
   <nav class="mobile-menu navbar navbar-expand-lg">
     <div class="container-fluid">
@@ -57,8 +61,36 @@
     </nav>
 
     <div class="container-split">
-      <img class="container-image" src="documents/KC_Poster.png" alt="KC_Poster">
+      <!-- <img class="container-image" src="documents/KC_Poster.png" alt="KC_Poster"> -->
+      <div class="w3-content w3-display-container">
+      
+      <div class="w3-display-container mySlides">
+        <img src="documents/KC_Poster.png" class="container-image">
+        <h6 class="figure-title"> Promotional Poster </h6>
+      </div>
+      
+      <div class="w3-display-container mySlides">
+        <img src="documents/KC_Poster_Structures.png" class="container-image">
+        <h6 class="figure-title"> Features & Specifications </h6>
+      </div>
+      
+      <div class="w3-display-container mySlides">
+        <img src="documents/KC_Poster_Components.png" class="container-image">
+        <h6 class="figure-title"> Structural Components </h6>
+      </div>
+      
+      <div class="w3-display-container mySlides">
+        <img src="documents/KC_Orthogonal.png" class="container-image">
+        <h6 class="figure-title"> Orthogonal Projection </h6>
+      </div>
+      <button class="btn-slideshow-left" onclick="plusDivs(-1)">&#10094;</button>  
+      <!-- <button class="w3-button w3-display-left w3-black" onclick="plusDivs(-1)">&#10094;</button> -->
+      <button class="btn-slideshow-right" onclick="plusDivs(1)">&#10095;</button>
     </div>
+    </div>
+
+
+    <!-- Main Content (Text Descriptions) -->
     <div class="container-split">
       <div class="descriptions">
         <h2> Drink Container Design</h2>
@@ -79,23 +111,40 @@
           for up to 12 hours. The product should also be BPA free and made up with food-grade 
           stainless steel and withstand daily uses for the lifespan of at least 5 years. The 
           container cannot have any sharp edges to ensure that the user can drink from the 
-          container safely without injuring themselves. The width ofthe bottle should be narrow 
-          enugh so thatthe user can grip on the container tightly without it slipping easily.
+          container safely without injuring themselves. The width of the bottle should be narrow 
+          enugh so that the user can grip on the container tightly without it slipping easily.
         </p>
-
       </div>
     </div>
-
-    <div class="container-right">
-
     </div>
-
   </div>
 
 
 
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+  
+  <!-- W3Schools JS [Slideshow] -->
+  <script>
+    var slideIndex = 1;
+    showDivs(slideIndex);
+    
+    function plusDivs(n) {
+      showDivs(slideIndex += n);
+    }
+    
+    function showDivs(n) {
+      var i;
+      var x = document.getElementsByClassName("mySlides");
+      if (n > x.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = x.length}
+      for (i = 0; i < x.length; i++) {
+         x[i].style.display = "none";  
+      }
+      x[slideIndex-1].style.display = "block";  
+    }
+  </script>
 
 </body>
 </html>
