@@ -17,6 +17,14 @@ html, body {
     display: flex;
   }
 
+.anim-fade-in {
+  animation: fade-in 1s forwards;
+}
+
+.anim-up {
+  animation: fade-in-up 1s forwards;
+}
+
 /* General Texts */
 h2, h5, p {
   color: #fff !important;
@@ -47,23 +55,47 @@ p {
   background: rgb(138,24,26);
 }
 
+.navbar-nav {
+  margin-top: 12px;
+  padding-top: 4px;
+  border-radius: 1em;
+  background-color: rgb(160, 60, 60);
+}
+
+.nav-link:hover {
+  color: #fff !important;
+  background-color: rgb(160, 50, 50);
+  text-align: center;
+}
+
+.navbar-brand {
+  margin-left: 16px;
+}
+
 .navbar-brand,
 .nav-link {
   color: #fff !important;
   text-align: center;
 }
 
+.nav-top {
+  margin-top: -4px;
+  border-top-left-radius: 1em;
+  border-top-right-radius: 1em;
+}
+
+.nav-bottom {
+  border-bottom-left-radius: 1em;
+  border-bottom-right-radius: 1em;
+}
+
 .active {
+  background-color: rgb(160, 50, 50);
   cursor: default !important;
-  text-decoration: underline !important;
+  font-weight: 700 !important;
 }
 
 /* Design Displays */
-/* .mySlides,
-.w3-display-container {
-  animation: fade-in-left 5s forward !important;
-} */
-
 .container-image {
   width: 70%;
   transform: translateX(6vw);
@@ -72,8 +104,6 @@ p {
 .figure-title {
   position: absolute;
   bottom: clamp(-3em, -5vh, -2em);
-  /* left: 40%; */
-  /* top: clamp(96%, 98vh, 104%); */
   text-align: center !important;
   color: #fff;
   width: 100%;
@@ -89,7 +119,6 @@ p {
 
   border: none;
   display: inline-block;
-  /* padding: 8px 16px; */
   padding-top: clamp(4px, 0.1vw, 8px);
   padding-bottom: clamp(4px, 0.1vw, 8px);
   padding-left: clamp(8px, 0.2vw, 16px);
@@ -131,8 +160,6 @@ p {
   flex-direction: column;
   align-items: center !important;
   justify-content: center !important;
-
-  animation: fade-in-left 5s forward !important;
 }
 
 .nav-container-right {
@@ -151,7 +178,6 @@ p {
 
 .description {
   width: 1200px;
-  animation: fade-in-left 5s forward !important;
 }
 
 /* Nav Links [on left side] */
@@ -169,7 +195,7 @@ p {
   cursor: pointer;
   transition: color 0.4s linear;
   position: relative;
-  animation: fade-in-right 1s forwards;;
+  animation: fade-in-right 1s forwards;
 }
 
 .kc-btn-active {
@@ -206,10 +232,20 @@ p {
   animation: fade-in-right 1s forward;
 }
 
-@keyframes fade-in-left {
+/* Fade-in Animations */
+@keyframes fade-in {
+  0% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in-left2 {
   0% {
     opacity: 0;
-    transform: translateX(-100%);
+    transform: translateX(-2600%);
   }
   100% {
     opacity: 1;
@@ -228,7 +264,7 @@ p {
   }
 }
 
-@keyframes fade-in-down {
+@keyframes fade-in-up {
   0% {
     opacity: 0;
     transform: translateY(-100%);
@@ -237,15 +273,6 @@ p {
     opacity: 1;
     transform: translateY(0);
   }
-}
-
-/* Responsive Design (Ipad Screen) */
-@media only screen and (max-width: 1200px) {
-}
-
-/* Responsive Design (Mini Ipad Screen) */
-@media only screen and (max-width: 950px) {
-
 }
 
 /* Responsive Design (Mobile) */
@@ -283,4 +310,106 @@ p {
     padding-bottom: 2vw;
     transform: none;
   }
+}
+
+
+/* Lightbox */
+/* .gallery-item {
+  cursor: pointer;
+}
+
+.lightbox {
+  position: fixed;
+  display: none;
+  background-color: #000;
+  opacity: 0.6;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  top: 0;
+  left: 0;
+  z-index: 999;
+}
+
+.lightbox-content {
+  position: relative;
+  width: 65%;
+  height: 58%;
+  margin: 5% auto;
+  margin-top: 100px;
+}
+
+.lightbox-content img {
+  width: 100%;
+  height: 100%;
+  border: 6px solid #fff;
+  object-fit: cover;
+}
+
+.lightbox-prev, 
+.lightbox-next {
+  position: absolute;
+  background-color: #000;
+  opacity: 0.8;
+  color: #fff;
+  padding: 10px;
+  top: 45%;
+  cursor: pointer;
+}
+
+.lightbox-prev {
+  left: 0;
+}
+
+.lightbox-next {
+  right: 0;
+}
+
+@media screen and (max-width: 767px) {
+  .gallery-container {
+    width: 100%;
+  }
+  
+  .gallery-item {
+    flex-basis: 49.80%;
+    margin-bottom: 3px;
+  }
+
+  .lightbox-content {
+    width: 80%;
+    height: 60%;
+    margin: 15% auto;
+  }
+} */
+.popup-image {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #000;
+  opacity: 0.9;
+  height: 100%;
+  width: 100%;
+  z-index: 100;
+}
+
+.popup-image span {
+  position: absolute;
+  top: 0;
+  right: 10px;
+  font-size: 40px;
+  font-weight: bolder;
+  color: #fff;
+  cursor: pointer;
+  z-index: 100;
+}
+
+.popup-image img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); 
+  border: 4px solid #fff;
+  border-radius: 5px;
+  width: 740px;
+  object-fit: cover;
 }
