@@ -8,7 +8,7 @@
 }
 
 html, body {
-  overflow: auto;
+  overflow: hidden;
   margin: 0;
 }
 

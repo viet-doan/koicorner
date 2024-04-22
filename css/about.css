@@ -218,10 +218,6 @@ p {
 
 /* Responsive Design (Mobile) */
 @media only screen and (max-width: 700px) {
-  html, body{
-    overflow-y: auto;
-}
-
   .nav-container-right,
   .kc-btn-active, .kc-btn,
   .koi-text, .corner-text{
