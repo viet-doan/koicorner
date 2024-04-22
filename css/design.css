@@ -179,7 +179,7 @@ p {
 
 /* Responsive Design (Mobile) */
 @media (max-width: 700px) {
-  html, body {
+  body {
     overflow: auto;
   }
 
@@ -195,10 +195,9 @@ p {
 
   .main-container {
     flex-direction: column-reverse;
-  }
+    transform: translateY(68vw);
 
-  .container-middle {
-    width: 100%;
+    padding: 0 24px;
   }
 
   .container-split {
@@ -209,7 +208,7 @@ p {
     width: 80vw;
     align-items: center;
     justify-content: center;
-    padding-top: 10vw;
-    padding-bottom: 10vw;
+    padding-top: 2vw;
+    padding-bottom: 2vw;
   }
 }
