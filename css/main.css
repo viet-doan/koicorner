@@ -106,10 +106,7 @@ html, body {
   font-size: clamp(18px, 2vw, 48px);
   text-align: center;
 
-  /* background: rgb(90, 15, 15);
-  border: 2px solid #211d1f; */
   border-left: 10px solid rgb(90, 15, 15);
-
   padding: 18px 10px;
   min-width: 160px;
   margin-left: 0px;
@@ -117,6 +114,7 @@ html, body {
   cursor: pointer;
   transition: color 0.4s linear;
   position: relative;
+  animation: fade-in-left 1s forwards;;
 }
 
 .kc-btn-active {
@@ -152,6 +150,20 @@ html, body {
     transform: scaleX(1);
 }
 
+.kc-btn {
+  animation: fade-in-left 1s forward;
+}
+
+@keyframes fade-in-left {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
 
 /* Responsive Design (Ipad Screen) */
 @media only screen and (max-width: 1200px) {

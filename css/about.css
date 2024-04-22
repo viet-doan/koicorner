@@ -8,6 +8,16 @@ html, body{
     overflow-x: hidden;
 }
 
+/* Background */
+.about-background {
+  /* background-color: rgb(220, 150, 150); */
+  position: absolute;
+  width: 100vw;    
+  overflow: hidden;
+  z-index: -99 !important;
+}
+
+/* Informational Text */
 .main-body{
   position: absolute;
   width: 48vw;
@@ -15,14 +25,11 @@ html, body{
   right: 14%;
 }
 
-/* ABOUT.HTML */
-.about-background {
-    /* background-color: rgb(220, 150, 150); */
-    position: absolute;
-    width: 100vw;    
-    overflow: hidden;
-    z-index: -99 !important;
+h1, p {
+  font-family: Arial, Helvetica, sans-serif;
+  color: rgb(100, 20, 20);
 }
+
 
 /* Navigation bar on the right */
 .nav-container-right {
@@ -48,15 +55,13 @@ html, body{
   font-size: 24px;
   text-align: center;
   
-  /* text-transform: uppercase; */
   border-right: 10px solid rgb(90, 15, 15);
   padding: 18px 10px;
   width: clamp(50px, 15vw, 200px);
   cursor: pointer;
   transition: color 0.4s linear;
   position: relative;
-  /* animation: fade-in-right 1s forwards; */
-  /* animation-delay: calc(0.2s * var(--index)); */
+  animation: fade-in-right 1s forwards;;
 }
 
 .kc-btn-active {
@@ -185,8 +190,7 @@ html, body{
   z-index: -1;
 }
 .about {
-  font-family: Arial, Helvetica, sans-serif;
-  color: rgb(100, 20, 20);
+
   position: absolute;
   left: 30%;
   right: 10%;
