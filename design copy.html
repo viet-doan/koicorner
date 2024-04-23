@@ -73,13 +73,13 @@
           <h6 class="figure-title"> Features & Specifications </h6>
         </div>
         
-        <div class="w3-display-container mySlides anim-fade-in">
+        <div class="w3-display-container mySlides anim-fade-in gallery-container">
           <!-- <img src="documents/KC_Poster_Components.png" class="container-image"> -->
           <img src="https://anai-g08uvvxmakmtcrdkbvja-assets.s3.ap-southeast-2.amazonaws.com/tHRR9x5ktQHTD8QLH2nv.png" class="container-image gallery-item" data-index="3">
           <h6 class="figure-title"> Structural Components </h6>
         </div>
         
-        <div class="w3-display-container mySlides anim-fade-in">
+        <div class="w3-display-container mySlides anim-fade-in gallery-container">
           <!-- <img src="documents/KC_Orthogonal.png" class="container-image"> -->
           <img src="https://anai-g08uvvxmakmtcrdkbvja-assets.s3.ap-southeast-2.amazonaws.com/wSn3ul22uNo9cpmWTeTD.png" class="container-image gallery-item" data-index="4">
           <h6 class="figure-title"> Orthogonal Projection </h6>
@@ -155,8 +155,15 @@
 
   <script>
     document.querySelectorALL('.gallery-container img').forEach(image => {
-      document.querySelector('.popup-image').style.display="block";
+      image.onclick = () => {
+        document.querySelector('.popup-image').style.display="block";
+        document.querySelector('.popup-image img').src = image.getAttribute('src');
+      }
     });
+
+    document.querySelector('.popup-image span').onclick = () => {
+      document.querySelector('.popup-image').style.display = 'none';
+    }
   </script>
 
   <!-- <script>
