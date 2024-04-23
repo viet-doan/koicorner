@@ -1,0 +1,364 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+  font-family: "Monserrat", sans-serif;
+}
+
+html, body {
+  background-color: #211d1f !important;
+  overflow: hidden;
+  margin: 0;
+}
+
+/* BACKGROUND */
+.main-container {
+    position: relative;
+    height: 100vh;
+    display: flex;
+  }
+
+.anim-left {
+  animation: fade-in-left 1s forwards;
+}
+
+.anim-up {
+  animation: fade-in-up 1s forwards;
+}
+
+/* General Texts */
+h2, h5, p {
+  color: #fff !important;
+}
+
+.description h2 {
+  text-align: center;
+  font-weight: 600 !important;
+  margin-bottom: 1em !important;
+  font-size: clamp(10px, 8vw, 36px) !important;
+}
+
+.description h5 {
+  font-weight: 600 !important;
+  font-size: clamp(12px, 4vw, 28px) !important;
+}
+
+.description p {
+  font-weight: 100 !important;
+  margin-bottom: 2em !important;
+  font-size: clamp(2px, 3vw, 16px) !important;
+}
+
+/* Links List */
+.container-logo {
+  margin-top: 20vh;
+  margin-bottom: 8vh;
+}
+
+.logo {
+  width: 12vw;
+}
+
+ul.links-list {
+  text-align: center;
+  margin-left: -3vw;
+}
+
+.links-list li{
+    margin-top: 2em;
+}
+
+.links-list {
+  list-style-type: none;
+  font-size: clamp( 10px, 1.8vw, 18px);
+  padding-bottom: 2em !important;
+}
+
+a.ref-links {
+  text-decoration: none;  
+  color: #d0d0d0;
+  top: 2em !important;
+}
+
+
+
+/* Drop Down Menu */
+.mobile-menu {
+  display: none !important;
+  text-transform: uppercase;
+  background: rgb(138,24,26);
+}
+
+.navbar-nav {
+  margin-top: 12px;
+  padding-top: 4px;
+  border-radius: 1em;
+  background-color: rgb(160, 60, 60);
+}
+
+.nav-link:hover {
+  color: #fff !important;
+  background-color: rgb(160, 50, 50);
+  text-align: center;
+}
+
+.navbar-brand {
+  margin-left: 16px;
+}
+
+.navbar-brand,
+.nav-link {
+  color: #fff !important;
+  text-align: center;
+}
+
+.nav-top {
+  margin-top: -4px;
+  border-top-left-radius: 1em;
+  border-top-right-radius: 1em;
+}
+
+.nav-bottom {
+  border-bottom-left-radius: 1em;
+  border-bottom-right-radius: 1em;
+}
+
+.active {
+  background-color: rgb(160, 50, 50);
+  cursor: default !important;
+  font-weight: 700 !important;
+}
+
+/* Design Displays */
+.container-image {
+  width: 70%;
+  transform: translateX(6vw);
+}
+
+.figure-title {
+  position: absolute;
+  bottom: clamp(-3em, -5vh, -2em);
+  text-align: center !important;
+  color: #fff;
+  width: 100%;
+  font-size: clamp(10px, 1vw, 16px);
+} 
+
+.btn-slideshow-left,
+.btn-slideshow-right {
+  position: absolute;
+  top: 101%;
+  transform: translate(0%, 0%);
+  -ms-transform:translate(0%,0%);
+
+  border: none;
+  display: inline-block;
+  padding-top: clamp(4px, 0.1vw, 8px);
+  padding-bottom: clamp(4px, 0.1vw, 8px);
+  padding-left: clamp(8px, 0.2vw, 16px);
+  padding-right: clamp(8px, 0.2vw, 16px);
+  vertical-align: middle;
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  background-color: inherit;
+  text-align: center;
+  cursor: pointer;
+  white-space: nowrap;
+
+  opacity: 0.8;
+  background-color: rgb(150, 50, 50);
+  color: #fff;
+}
+
+.btn-slideshow-left:hover,
+.btn-slideshow-right:hover {
+  opacity: 1;
+}
+
+.btn-slideshow-left {
+  left: 20%;
+}
+
+.btn-slideshow-right {
+  right: 20%;
+}
+
+/* Containers */
+.container-left {
+  position: relative;
+  z-index: 1;
+  width: 17%;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.container-middle {
+    position: relative;
+    z-index: 1;
+    width: 35%;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+
+.nav-container-right {
+  position: absolute;
+  height: 100vh;
+  top:1%;
+  right: 0;
+  z-index: 100;
+  width: 13%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-end;
+}
+
+.description {
+  width: 1200px;
+}
+
+/* Nav Links [on left side] */
+.kc-btn, .kc-btn-active {
+  text-decoration: none;
+  color: rgb(180, 70, 70);
+  font-weight: 500;
+  font-size: clamp(12px, 2vw, 24px);
+  text-align: center;
+  
+  border-right: 10px solid rgb(150, 50, 50);
+  padding: 18px 10px;
+  width: clamp(100px, 15vw, 200px);
+
+  cursor: pointer;
+  transition: color 0.4s linear;
+  position: relative;
+  animation: fade-in-right 1s forwards;
+}
+
+.kc-btn-active {
+  font-weight: 700;
+  cursor: default;
+}
+
+.kc-btn:hover {
+  color: #fff;
+}
+
+.kc-btn::before{
+  content: "";
+  position:absolute;
+  left:0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgb(110, 30, 30);
+  z-index: -1;
+  transition: transform 0.5s;
+  transform-origin: 100% 0;
+}
+
+.kc-btn::before {
+  transform: scaleX(0);
+}
+
+.kc-btn:hover::before {
+  transform: scaleX(1);
+}
+
+.kc-btn {
+  animation: fade-in-right 1s forward;
+}
+
+/* Fade-in Animations */
+@keyframes fade-in {
+  0% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in-left {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fade-in-right {
+  0% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fade-in-up {
+  0% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design (Mobile) */
+@media (max-width: 700px) {
+  body {
+    overflow: auto;
+    margin-bottom: 2em;
+  }
+
+  .mobile-menu {
+    display: block !important;
+  }
+
+  .nav-container-left,
+  .kc-btn-active, .kc-btn,
+  .koi-text, .corner-text{
+    display: none;
+  }
+
+  .main-container {
+    flex-direction: column-reverse;
+    transform: translateY(68vw);
+    top: 26vh;
+  }
+
+  .container-split {
+    width: 100%;
+  }
+
+  .container-image {
+    width: 80vw;
+    align-items: center;
+    justify-content: center;
+    transform: none;
+    margin-top: 2em;
+    margin-bottom: 10vw;
+  }
+
+  .container-split {
+    position: relative;
+    width: 90%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+  }
+}
