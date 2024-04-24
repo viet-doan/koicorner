@@ -24,7 +24,8 @@ html, body{
 
 /* Informational Text */
 .main-body{
-  position: absolute;
+  position: relative;
+  margin-top: 10vh;
   width: 50vw;
   left: clamp(10%, 14vw, 18vw);
   animation: fade-in-down 1s forwards;
@@ -193,8 +194,9 @@ p {
 /* Responsive Design (Smaller Screen) */
 @media only screen and (max-width: 1000px) {
   .main-body{
-    position: absolute;
-    width: 60vw;
+    margin-top: 10vh;
+    position: relative;
+    width: 50vw;
     left: clamp(10%, 14vw, 18vw);
     animation: fade-in-down 1s forwards;
   }
@@ -216,6 +218,10 @@ p {
 
 /* Responsive Design (Mobile) */
 @media only screen and (max-width: 700px) {
+  html, body {
+    overflow-y: auto;
+  }
+  
   .nav-container-right,
   .kc-btn-active, .kc-btn,
   .koi-text, .corner-text{
@@ -227,8 +233,10 @@ p {
   }
 
   .main-body{
+    margin-top: 2vh;
+    margin-right: 2vh;
     position: absolute;
-    width: 70vw;
+    width: 60vw;
     left: clamp(12%, 14vw, 18vw);
     animation: fade-in-down 1s forwards;
   }
