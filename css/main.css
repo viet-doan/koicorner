@@ -8,7 +8,8 @@
 }
 
 html, body {
-  overflow: hidden;
+  background-color: #211d1f !important;
+  overflow: auto;
   margin: 0;
 }
 
@@ -26,36 +27,30 @@ html, body {
   right: 6%;
   width: 100vw;
   height: 100%;
-  z-index: -1;
+  z-index: 0;
   animation: fade-in-down 1s forwards;
 }
 
 /* TEXTS AROUND LOGO */
-.koi-text {
-  text-transform: uppercase;
-  position: absolute;
-  top: 40%;
-  left: 30%;
-  transform: translateY(-50%);
-  animation: kc-fade-down 1s forwards;
 
-  font-size: clamp(40px, 2vh, 240px);
-  font-weight: 500;
-  color: rgb(138,24,26);
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-}
-  
+.koi-text,
 .corner-text {
   text-transform: uppercase;
   position: absolute;
+  font-size: clamp(40px, 2vh, 240px);
+  color: #b95757;
+  text-shadow: 2px 2px 4px rgba(72, 72, 72, 0.5);
+  animation: kc-fade-down 1s forwards;
+}
+.koi-text {
+  top: 40%;
+  left: 30%;
+  transform: translateY(-50%);
+}
+  
+.corner-text {
   top: 40%;
   right: 37%;
-  animation: kc-fade-down 1s forwards;
-
-  font-size: clamp(40px, 2vh, 240px);
-  font-weight: 500;
-  color: rgb(138,24,26);
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 /* Navigation bar on the right */
@@ -75,12 +70,12 @@ html, body {
   
 .kc-btn, .kc-btn-active {
   text-decoration: none;
-  color: rgb(138,24,26);
+  color: rgb(180, 70, 70);
   font-weight: 500;
   font-size: clamp(12px, 2vw, 24px);
   text-align: center;
   
-  border-right: 10px solid rgb(90, 15, 15);
+  border-right: 10px solid rgb(150, 50, 50);
   padding: 18px 10px;
   width: clamp(100px, 15vw, 200px);
 
@@ -107,7 +102,7 @@ html, body {
   top: 0;
   width: 100%;
   height: 100%;
-  background: rgb(138,24,26);
+  background: rgb(110, 30, 30);
   z-index: -1;
   transition: transform 0.5s;
   transform-origin: 100% 0;
@@ -223,11 +218,22 @@ html, body {
   }
 }
 
+@media only screen and (max-width: 900px) {
+  .koi-text {
+    left: 24%;
+  }
+  
+  .corner-text {
+    right: 22%
+  }
+}
+
 /* Responsive Design (Mobile) */
 @media only screen and (max-width: 750px) {
 
   .mobile-menu {
     display: block !important;
+    z-index: 99;
   }
 
   .background-image{
@@ -235,7 +241,7 @@ html, body {
     height: 150vh;
     width: 150vw;
     overflow: hidden;
-    z-index: -1;
+    z-index: 0;
   }
 
   .background-image img{
