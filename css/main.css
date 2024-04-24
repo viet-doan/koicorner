@@ -9,7 +9,7 @@
 
 html, body {
   background-color: #211d1f !important;
-  overflow: auto;
+  overflow: hidden;
   margin: 0;
 }
 
