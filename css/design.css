@@ -30,22 +30,22 @@ h2, h5, p {
   color: #fff !important;
 }
 
-.description h2 {
-  text-align: center;
+.descriptions h2 {
+  text-align: left;
   font-weight: 600 !important;
   margin-bottom: 1em !important;
-  font-size: clamp(10px, 8vw, 36px) !important;
+  font-size: 24px !important;
 }
 
-.description h5 {
+.descriptions h5 {
   font-weight: 600 !important;
-  font-size: clamp(12px, 4vw, 28px) !important;
+  font-size: 18 !important;
 }
 
-.description p {
+.desc-text {
   font-weight: 100 !important;
   margin-bottom: 2em !important;
-  font-size: clamp(2px, 3vw, 16px) !important;
+  font-size: 16px !important;
 }
 
 /* Drop Down Menu */
@@ -103,11 +103,11 @@ h2, h5, p {
 
 .figure-title {
   position: absolute;
-  bottom: clamp(-3em, -5vh, -2em);
+  bottom: -40px;
   text-align: center !important;
   color: #fff;
   width: 100%;
-  font-size: clamp(10px, 1vw, 16px);
+  font-size: 16px;
 } 
 
 .btn-slideshow-left,
@@ -119,10 +119,10 @@ h2, h5, p {
 
   border: none;
   display: inline-block;
-  padding-top: clamp(4px, 0.1vw, 8px);
-  padding-bottom: clamp(4px, 0.1vw, 8px);
-  padding-left: clamp(8px, 0.2vw, 16px);
-  padding-right: clamp(8px, 0.2vw, 16px);
+  padding-top: 6px;
+  padding-bottom: 6px;
+  padding-left: 14px;
+  padding-right: 14px;
   vertical-align: middle;
   overflow: hidden;
   text-decoration: none;
@@ -183,14 +183,14 @@ h2, h5, p {
 /* Nav Links [on left side] */
 .kc-btn, .kc-btn-active {
   text-decoration: none;
-  color: rgb(180, 70, 70);
+  color: #fff;
   font-weight: 500;
-  font-size: clamp(12px, 2vw, 24px);
+  font-size: 24px;
   text-align: center;
   
   border-right: 10px solid rgb(150, 50, 50);
   padding: 18px 10px;
-  width: clamp(100px, 15vw, 200px);
+  width: 15vw;
 
   cursor: pointer;
   transition: color 0.4s linear;

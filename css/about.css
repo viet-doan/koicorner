@@ -2,7 +2,6 @@
 
 * {
   font-family: "Monserrat", sans-serif !important;
-  font-size: 15px !important;
 }
 
 html, body{
@@ -39,21 +38,19 @@ html, body{
 }
 
 /* Informational Text */
-.main-container h2 {
+h2 {
   color: #fff !important;
   font-weight: 500 !important;
   text-align: left;
   font-size: 32px !important;
   padding-bottom: 3vh;
 }
-
-.main-container h5 {
+h5 {
   color: #fff !important;
   font-weight: 500 !important;
   font-size: 24px !important;
 }
-
-.main-container p {
+p {
   color: #fff;
   font-weight: 100 !important;
   margin-bottom: 2em !important;
@@ -203,15 +200,13 @@ html, body{
 
 /* Responsive Design (Smaller Screen) */
 @media only screen and (max-width: 1200px) {
-  .main-container h2 {
+  h2 {
     font-size: 28px !important;
   }
-  
-  .main-container h5 {
+  h5 {
     font-size: 20px !important;
   }
-  
-  .main-container p {
+  p {
     margin-bottom: 2em !important;
     font-size: 16px !important;
   }
@@ -221,6 +216,10 @@ html, body{
 @media only screen and (max-width: 900px) {
   html{
     overflow-y: visible;
+  }
+
+  .mobile-menu {
+    display: block !important;
   }
 
   .nav-container-right,
@@ -241,20 +240,16 @@ html, body{
     align-items: flex-start;
   }
 
-  .main-container h2 {
+  h2 {
     font-size: 24px !important;
   }
   
-  .main-container h5 {
+  h5 {
     font-size: 16px !important;
   }
   
-  .main-container p {
+  p {
     margin-bottom: 2em !important;
     font-size: 14px !important;
-  }
-  
-  .mobile-menu {
-    display: block !important;
   }
 }
