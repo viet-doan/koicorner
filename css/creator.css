@@ -28,19 +28,19 @@ h2 {
   color: #fff !important;
   font-weight: 500 !important;
   text-align: left;
-  font-size: 32px !important;
+  font-size: 30px !important;
   padding-bottom: 3vh;
 }
 h5 {
   color: #fff !important;
   font-weight: 500 !important;
-  font-size: 24px !important;
+  font-size: 22px !important;
 }
 p {
   color: #fff;
   font-weight: 100 !important;
   margin-bottom: 2em !important;
-  font-size: 18px !important;
+  font-size: 16px !important;
 }
 
 /* PFP, Icons and Links */
@@ -186,9 +186,10 @@ a.ref-links {
 /* Nav Links [on left side] */
 .kc-btn, .kc-btn-active {
   text-decoration: none;
+  /* color: rgb(180, 70, 70); */
   color: #fff;
   font-weight: 500;
-  font-size: clamp(12px, 2vw, 24px);
+  font-size: 22px !important;
   text-align: center;
   
   border-right: 10px solid rgb(150, 50, 50);
@@ -198,7 +199,7 @@ a.ref-links {
   cursor: pointer;
   transition: color 0.4s linear;
   position: relative;
-  animation: fade-in-right 1s forwards;
+  animation: fade-in-right 1s forwards;;
 }
 
 .kc-btn-active {
@@ -435,14 +436,14 @@ background-color: rgb(160, 60, 60) !important;
 /* Responsive Design (Smaller Screen) */
 @media only screen and (max-width: 1200px) {
   h2 {
-    font-size: 28px !important;
+    font-size: 26px !important;
   }
   h5 {
-    font-size: 20px !important;
+    font-size: 18px !important;
   }
   p {
     margin-bottom: 2em !important;
-    font-size: 16px !important;
+    font-size: 14px !important;
   }
 }
 
@@ -499,16 +500,15 @@ background-color: rgb(160, 60, 60) !important;
     margin: auto;
   }
 
-  h2 {
-    font-size: 24px !important;
+  .main-container h2 {
+    font-size: 28px !important;
   }
   
-  h5 {
+  .main-container h5 {
+    font-size: 20px !important;
+  }
+  
+  .main-container p {
     font-size: 16px !important;
-  }
-  
-  p {
-    margin-bottom: 2em !important;
-    font-size: 14px !important;
   }
 }

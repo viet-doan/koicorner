@@ -338,15 +338,15 @@ p {
     margin: auto;
   }
 
-  .main-container h2 {
+  h2 {
     font-size: 28px !important;
   }
   
-  .main-container h5 {
+  h5 {
     font-size: 20px !important;
   }
   
-  .main-container p {
+  p {
     font-size: 16px !important;
   }
 }

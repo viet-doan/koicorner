@@ -57,9 +57,9 @@
       <!-- Profile Image -->
       <h1 class="creator-name">Viet Doan</h1>
       <div class="creator-profile">
-        <!-- <img class="profile-pic" src="documents/viet-pfp.jpg" alt="Viet Doan's Profile Picture"> -->
         <img class="profile-pic" src="https://anai-g08uvvxmakmtcrdkbvja-assets.s3.ap-southeast-2.amazonaws.com/Nj3WaAO04f3H5dZOeXUT.jpg" alt="Viet Doan's Profile Picture">
-       </div>
+        <!-- <img class="profile-pic" src="[viet-pfp]" alt="Viet Doan's Profile Picture"> -->
+      </div>
   
       <!-- Icons -->
       <div class="container-icons">
@@ -124,6 +124,7 @@
         <path d="M16 8A8 8 0 1 0 0 8a8 8 0 0 0 16 0m-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707z"/>
       </svg>
     </a></button>
+    <!-- <button class="back-btn"><a href="#main">[up_arrow]</a></button> -->
     </button>
     <div class="row">
         <h2>Contact Me</h2>
@@ -155,48 +156,48 @@
    
   <!-- Script to Send email after submitting the Form -->
   <script>
-      const contactForm = document.getElementById("contactForm");
-      if (contactForm) {
-          document.getElementById('contactForm').addEventListener('submit', async function(e) {
-          e.preventDefault();
-  
-          const loadingOverlay = document.querySelector(".loading-overlay");
-          loadingOverlay.style.display = "block";
-  
-          const name = document.getElementById('name').value;
-          const email = document.getElementById('email').value;
-          const message = document.getElementById('message').value;
-  
-          try {
-              const result = await submitContact(name, email, message);
-              console.log(result);
-              // alert('Message sent successfully!');
-              const loadingOverlay = document.querySelector(".loading-overlay");
-              loadingOverlay.style.display = "none";
-              Swal.fire({
-                  title: "",
-                  text: "Message Sent Successfully!",
-                  icon: "success"
-              });
-  
-              name.value = "";
-              email.value = "";
-              message.value = "";
-          } catch (error) {
-              console.error(error);
-              // alert('Error sending message. Please try again later.');
-              const loadingOverlay = document.querySelector(".loading-overlay");
-              loadingOverlay.style.display = "none";
-              Swal.fire({
-                  icon: "error",
-                  title: "Oops...",
-                  text: "Oops, something went wrong! You could contact me via \n vietdoan.vqd@gmail.com",
-                  footer: ''
-              });
-          }
-          });
-      }
+    const contactForm = document.getElementById("contactForm");
+    if (contactForm) {
+        document.getElementById('contactForm').addEventListener('submit', async function(e) {
+        e.preventDefault();
+
+        const loadingOverlay = document.querySelector(".loading-overlay");
+        loadingOverlay.style.display = "block";
+
+        const nameInput = document.getElementById('name');
+        const emailInput = document.getElementById('email');
+        const messageInput = document.getElementById('message');
+
+        try {
+            const result = await submitContact(nameInput.value, emailInput.value, messageInput.value);
+            console.log(result);
+            const loadingOverlay = document.querySelector(".loading-overlay");
+            loadingOverlay.style.display = "none";
+            Swal.fire({
+                title: "",
+                text: "Message Sent Successfully!",
+                icon: "success"
+            });
+
+            nameInput.value = "";
+            emailInput.value = "";
+            messageInput.value = "";
+        } catch (error) {
+            console.error(error);
+            alert(error);
+            const loadingOverlay = document.querySelector(".loading-overlay");
+            loadingOverlay.style.display = "none";
+            Swal.fire({
+                icon: "error",
+                title: "Oops...",
+                text: "Oops, something went wrong! You could contact me via \n vietdoan.vqd@gmail.com",
+                footer: ''
+            });
+        }
+        });
+    }
   </script>
+
   
   <!-- Sweet Alert JS -->
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
