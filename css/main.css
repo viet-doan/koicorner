@@ -71,9 +71,10 @@ html, body {
   
 .kc-btn, .kc-btn-active {
   text-decoration: none;
+  /* color: rgb(180, 70, 70); */
   color: #fff;
   font-weight: 500;
-  font-size: clamp(12px, 2vw, 24px);
+  font-size: 22px !important;
   text-align: center;
   
   border-right: 10px solid rgb(150, 50, 50);
@@ -83,7 +84,7 @@ html, body {
   cursor: pointer;
   transition: color 0.4s linear;
   position: relative;
-  animation: fade-in-right 1s forwards;
+  animation: fade-in-right 1s forwards;;
 }
 
 .kc-btn-active {
@@ -234,7 +235,7 @@ html, body {
 
   .mobile-menu {
     display: block !important;
-    z-index: 99;
+    z-index: 9;
   }
 
   .background-image{
