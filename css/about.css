@@ -2,6 +2,7 @@
 
 * {
   font-family: "Monserrat", sans-serif !important;
+  font-size: 15px !important;
 }
 
 html, body{
@@ -15,7 +16,6 @@ html, body{
 
 /* Background */
 .about-background {
-  /* background-color: rgb(220, 150, 150); */
   position: absolute;
   width: 100vw;    
   overflow: hidden;
@@ -23,38 +23,41 @@ html, body{
   z-index: 0 !important;
 }
 
-/* Informational Text */
-.main-body{
-  position: relative;
-  margin-top: 10vh;
+.main-container {
+  position: absolute;
+  left: 30%;
+  right: 20%;
   width: 50vw;
-  left: clamp(10%, 14vw, 18vw);
+  height: 100vh;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding-left: 4px;
   animation: fade-in-down 1s forwards;
 }
 
-.row {
-  top: 8vh;
-}
-
-.main-body h2 {
+/* Informational Text */
+.main-container h2 {
   color: #fff !important;
-  font-weight: 550 !important;
+  font-weight: 500 !important;
   text-align: left;
-  font-size: clamp(10px, 6vw, 32px) !important;
+  font-size: 32px !important;
   padding-bottom: 3vh;
 }
 
-.main-body h5 {
+.main-container h5 {
   color: #fff !important;
   font-weight: 500 !important;
-  font-size: clamp(12px, 4vw, 24px) !important;
+  font-size: 24px !important;
 }
 
-.main-body p {
+.main-container p {
   color: #fff;
   font-weight: 100 !important;
   margin-bottom: 2em !important;
-  font-size: clamp(2px, 3vw, 16px) !important;
+  font-size: 18px !important;
 }
 
 /* Navigation bar on the right */
@@ -74,9 +77,10 @@ html, body{
   
 .kc-btn, .kc-btn-active {
   text-decoration: none;
-  color: rgb(180, 70, 70);
+  /* color: rgb(180, 70, 70); */
+  color: #fff;
   font-weight: 500;
-  font-size: clamp(12px, 2vw, 24px);
+  font-size: 24px !important;
   text-align: center;
   
   border-right: 10px solid rgb(150, 50, 50);
@@ -147,9 +151,14 @@ html, body{
 
 /* Drop Down Menu */
 .mobile-menu {
+  width: 100vw;
   display: none !important;
   text-transform: uppercase;
   background: rgb(138,24,26);
+}
+
+.navbar-toggler {
+  margin-right: 16px;
 }
 
 .navbar-nav {
@@ -193,56 +202,59 @@ html, body{
 }
 
 /* Responsive Design (Smaller Screen) */
-@media only screen and (max-width: 1000px) {
-  .main-body{
-    margin-top: 10vh;
-    position: relative;
-    width: 50vw;
-    left: clamp(10%, 14vw, 18vw);
-    animation: fade-in-down 1s forwards;
+@media only screen and (max-width: 1200px) {
+  .main-container h2 {
+    font-size: 28px !important;
   }
   
-  .row {
-    top: 8vh;
-  }
-  h1 {
-    padding-bottom: 1vh;
-    font-size: clamp(12px, 3vh, 18px);
-  }
-
-  p {
-    padding-bottom: 0;
-    font-size: clamp(12px, 4vh, 18px);
+  .main-container h5 {
+    font-size: 20px !important;
   }
   
+  .main-container p {
+    margin-bottom: 2em !important;
+    font-size: 16px !important;
+  }
 }
 
 /* Responsive Design (Mobile) */
 @media only screen and (max-width: 900px) {
-  html, body {
-    overflow-y: auto;
+  html{
+    overflow-y: visible;
   }
-  
+
   .nav-container-right,
   .kc-btn-active, .kc-btn,
   .koi-text, .corner-text{
     display: none;
   }
 
+  .main-container {
+    position: relative;
+    left: 30%;
+    top: 0;
+    margin-top: 4em;
+    margin-left: 0;
+    margin-right: 0;
+    width: 60vw;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  .main-container h2 {
+    font-size: 24px !important;
+  }
+  
+  .main-container h5 {
+    font-size: 16px !important;
+  }
+  
+  .main-container p {
+    margin-bottom: 2em !important;
+    font-size: 14px !important;
+  }
+  
   .mobile-menu {
     display: block !important;
-  }
-
-  .main-body{
-    margin-top: 2vh;
-    margin-right: 2vh;
-    position: absolute;
-    width: 60vw;
-    left: clamp(12%, 14vw, 18vw);
-    animation: fade-in-down 1s forwards;
-  }
-
-  .row {
-    top: 2vh;
   }
 }
