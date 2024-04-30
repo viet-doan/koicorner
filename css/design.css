@@ -89,20 +89,22 @@ p {
 .design-image {
   
   display: flex;
-  width: 100%;
+  width: 70%;
   margin:auto;
 }
 
-.wrapper {
+/* .wrapper {
   padding: 1em;
   width: 70%;
   background: rgb(110, 30, 30);
-}
+} */
 
 .figure-title {
   display: flex;
   top: calc(-22px - 3vh);
   text-align: center !important;
+  /* background: rgb(110, 30, 30); */
+  background-color: rgb(150, 50, 50);
   color: #fff;
   width: 70%;
   height: 38px;
@@ -114,7 +116,7 @@ p {
 
 .btn-slideshow-container {
   display: flex;
-  width: 100%;
+  width: 70%;
   margin: auto
 }
 
@@ -122,7 +124,7 @@ p {
 .btn-slideshow-right {
   display: flex;
   position: relative;
-  width: 100%;
+  width: 50%;
   border: none;
   display: inline-block;
   padding-top: 6px;
@@ -141,11 +143,10 @@ p {
 
 .btn-slideshow-left:hover,
 .btn-slideshow-right:hover {
-  opacity: 0.6;
+  opacity: 0.8;
 }
 
 .btn-slideshow-left {
-  opacity: 0.8;
   left: 0;
 }
 
@@ -348,12 +349,20 @@ p {
     width: 80%;
   }
 
-  .wrapper {
+  /* .wrapper {
     width: 80vw;
-  }
+  } */
   .design-image {
-    width: 100%;
+    width: 80%;
     margin: auto;
+  }
+
+  .figure-title {
+    width: 80%;
+  } 
+  
+  .btn-slideshow-container {
+    width: 80%;
   }
 
   h2 {
