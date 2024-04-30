@@ -496,13 +496,11 @@ background-color: rgb(160, 60, 60) !important;
 
   .container-form{
     position: relative;
-    display: block !important;
-    align-items: center !important;
+    display: flex !important;
+    align-items: flex-start !important;
     justify-content: center !important;
     width: 80vw !important;
-    top: 8em;
-    margin-bottom: 4em;
-    margin: auto;
+    top: 10em;
   }
 
   .row {
