@@ -5,7 +5,8 @@
 }
 
 html, body{
-  background-color: #211d1f !important;
+  /* background-color: #211d1f !important; */
+  background-image: url('[BannerBBG]');
   margin: 0;
   background-size: 100%;
   background-repeat: repeat-y;
@@ -13,7 +14,7 @@ html, body{
 }
 
 html {
-  overflow-y: auto;
+  overflow: hidden;
 }
 
 /* Background */
@@ -22,6 +23,7 @@ html {
   width: 100vw;    
   overflow: hidden;
   animation: fade-in-down 1s forwards;
+  background-repeat: repeat-y;
   z-index: 0 !important;
 }
 
@@ -234,10 +236,8 @@ p {
   .main-container {
     position: relative;
     left: 30%;
-    top: 0;
-    margin-top: 4em;
-    margin-left: 0;
-    margin-right: 0;
+    top: 4em;
+    margin: 0;
     width: 60vw;
     justify-content: flex-start;
     align-items: flex-start;
